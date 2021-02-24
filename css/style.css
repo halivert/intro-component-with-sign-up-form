@@ -40,7 +40,7 @@ body {
 	font-size: var(--font-size);
 	line-height: 1.5;
 	background-color: var(--background-color);
-	background-image: url("./images/bg-intro-mobile.png");
+	background-image: url("../images/bg-intro-mobile.png");
 }
 
 main#main {
@@ -138,7 +138,7 @@ input.input:active {
 	top: 50%;
 	transform: translateY(-55%);
 	right: 1em;
-	content: url(./images/icon-error.svg);
+	content: url("../images/icon-error.svg");
 }
 
 .field.has-error input.input {
@@ -258,7 +258,7 @@ a:active {
 
 @media (min-width: 769px) {
 	body {
-		background-image: url("./images/bg-intro-desktop.png");
+		background-image: url("../images/bg-intro-desktop.png");
 	}
 
 	main#main {
