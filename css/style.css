@@ -263,7 +263,7 @@ a:active {
 
 	main#main {
 		flex-direction: row;
-		padding: 0 7em;
+		padding: 0.5em 7em;
 		align-items: center;
 		justify-content: center;
 	}

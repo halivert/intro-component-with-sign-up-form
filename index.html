@@ -32,7 +32,7 @@
 					<strong>Try it free 7 days</strong> then $20/mo. thereafter
 				</a>
 
-				<form action="#" class="has-shadow">
+				<form action="#" class="has-shadow" id="register-form" novalidate>
 					<div class="field">
 						<div class="control">
 							<input
@@ -40,6 +40,7 @@
 								name="first_name"
 								placeholder="First Name"
 								type="text"
+								autocomplete="given-name"
 							/>
 							<!-- <i class="icon error"></i> -->
 						</div>
@@ -53,6 +54,7 @@
 								name="last_name"
 								placeholder="Last Name"
 								type="text"
+								autocomplete="family-name"
 							/>
 						</div>
 					</div>
@@ -64,6 +66,7 @@
 								name="email_address"
 								placeholder="Email Address"
 								type="email"
+								autocomplete="email"
 							/>
 						</div>
 					</div>
@@ -75,6 +78,7 @@
 								name="password"
 								placeholder="Password"
 								type="password"
+								autocomplete="new-password"
 							/>
 						</div>
 					</div>
