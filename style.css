@@ -223,6 +223,12 @@ footer {
 	background: transparent;
 }
 
+a {
+	cursor: default;
+	text-decoration: none;
+	outline: none;
+}
+
 .attribution {
 	border-top: 2px solid #ff7070;
 	padding: 0.5em 1em;
@@ -235,10 +241,28 @@ footer {
 	text-decoration: none;
 }
 
+a:hover {
+	filter: brightness(80%);
+}
+
+a:focus,
+a:focus-visible,
+a:active {
+	filter: brightness(60%);
+	text-decoration: underline;
+}
+
+.strong {
+	font-weight: bold;
+}
+
 @media (min-width: 769px) {
+	body {
+		background-image: url("./images/bg-intro-desktop.png");
+	}
+
 	main#main {
 		flex-direction: row;
-		background-image: url("./images/bg-intro-desktop.png");
 		padding: 0 7em;
 		align-items: center;
 		justify-content: center;
