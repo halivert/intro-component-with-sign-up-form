@@ -45,6 +45,10 @@ function isEmpty(input) {
 	return value.length < 1;
 }
 
+function validDomain(email) {
+	return email.match(/.*\.[A-Za-z]{2,255}$/);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	const form = document.getElementById("register-form");
 
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		"First Name": "[name='first_name']",
 		"Last Name": "[name='last_name']",
 		"Email Address": "[name='email_address']",
-		"Password": "[name='password']",
+		Password: "[name='password']",
 	};
 
 	form.querySelectorAll(Object.values(inputs).toString()).forEach((input) => {
@@ -78,7 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		// Validate email address
 		const emailAddressInput = form.querySelector(inputs["Email Address"]);
-		if (emailAddressInput.validity && !emailAddressInput.validity.valid) {
+		if (
+			(emailAddressInput.validity && !emailAddressInput.validity.valid) ||
+			!validDomain(emailAddressInput.value)
+		) {
 			addError(emailAddressInput, "Looks like this is not an email");
 		}
 
